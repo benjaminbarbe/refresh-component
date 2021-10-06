@@ -3,10 +3,6 @@ import './index.css';
 
 PandaBridge.init(() => {
   PandaBridge.listen('reload', () => {
-    if (window.parent) {
-      window.parent.location.reload();
-    } else {
-      window.location.reload();
-    }
+    window.top.location.reload();
   });
 });
